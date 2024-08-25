@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&family=Nunito:wght@400;600&display=swap');
+
+:root {
+    --text-color: #3a3a3a; /* Warm gray */
+    --bg-color: #fafafa; /* Soft white */
+    --accent-color: #bfae98; /* Muted gold */
+    --secondary-bg-color: #fff; /* White */
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: #e0e0e0;
+        --bg-color: #2c3e50;
+        --accent-color: #bfae98;
+        --secondary-bg-color: #34495e;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: sans-serif;
+    line-height: 1.75;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: var(--secondary-bg-color);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.headshot {
+    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+    margin: 20px auto;
+    display: block;
+    border: 3px solid var(--accent-color);
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+h1 {
+    font-family: 'EB Garamond', sans-serif;
+    font-weight: 100;
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--text-color);
+    letter-spacing: 7px; /*add spacing between letters */
+}
+
+h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 100;
+    font-size: 24px;
+    margin-bottom: 25px;
+    color: var(--text-color);
+    letter-spacing: 7px; 
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: var(--text-color);
+    letter-spacing: 0.5px; /* Adds spacing between letters */
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+
+    .headshot {
+        width: 150px;
+        height: 150px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .social-icons a {
+        font-size: 20px;
+        margin: 0 8px;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.social-icons a {
+    display: block;
+    margin: 0 10px;
+    color: var(--text-color);
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--accent-color);
+}
+
